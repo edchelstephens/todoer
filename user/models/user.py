@@ -15,6 +15,17 @@ class User(AbstractUser):
         db_table = "users"
 
 
+    def __repr__(self) -> str:
+        return "User(pk={}, name={}, email={}, username={})".format(
+            self.pk,
+            self.name,
+            self.email,
+            self.username
+        )
+
+    def __repr__(self) -> str:
+        return self.name
+
 class Friendship(models.Model):
     """Friendship intermediate model for users."""
 
@@ -36,3 +47,10 @@ class Friendship(models.Model):
     class Meta:
         app_label = "user"
         db_table = "friendships"
+
+    def __repr__(self) -> str:
+        return "Friendship(pk={}, invitee={}, inviter={})".format(
+            self.pk,
+            self.invitee,
+            self.inviter
+        )
