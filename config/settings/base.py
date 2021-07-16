@@ -75,7 +75,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'todoer.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
